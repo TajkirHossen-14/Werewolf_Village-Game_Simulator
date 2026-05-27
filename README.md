@@ -237,7 +237,7 @@ jupyter notebook Werewolf_Game.ipynb
  
 ### Use Your Own Player Names
  
-Just edit `players.txt` before running — one name per line:
+Just edit `players.txt` before running – one name per line:
  
 ```
 Name1
@@ -258,7 +258,7 @@ Name4
 | File reading | ✅ | `load_players()` reads `players.txt` |
 | File writing | ✅ | `save_result()` writes `result.txt` |
 | Random module | ✅ | `random.sample()`, `random.choice()`, `random.randint()` |
-| List of objects | ✅ | `self.players` — list of `Player` instances |
+| List of objects | ✅ | `self.players` – list of `Player` instances |
 | Loop-based gameplay | ✅ | `while True` loop in `start_game()` |
  
 ---
@@ -268,9 +268,5 @@ Name4
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)
  
 - **Language :** Python 3
-- **Libraries :** `random` (built-in only — no external dependencies)
----
- 
-## 📄 License
- 
-This project is open source and available under the [MIT License](LICENSE).
+- **Libraries :** `random` (built-in only – no external dependencies)
+
