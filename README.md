@@ -183,7 +183,7 @@ Both events are triggered inside `night_phase()` using `random.randint(1, 10)`.
  
 ## 💾 File Format
  
-### `players.txt` (input)
+### `players.txt` (Input)
 One player name per line. Minimum 4 players recommended.
  
 ```
