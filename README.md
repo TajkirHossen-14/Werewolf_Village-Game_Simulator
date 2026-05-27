@@ -7,9 +7,10 @@
  
 A text-based simulation of the classic **Werewolf** game, built in Python.  
 Two hidden werewolves lurk among the villagers. Every night they strike; every day the village votes.  
-The game ends when all werewolves are gone — or when the wolves outnumber the survivors.
+The game ends when all werewolves are gone or when the wolves outnumber the survivors.
 
 </div>
+
 ---
  
 ## 📸 Sample Output
