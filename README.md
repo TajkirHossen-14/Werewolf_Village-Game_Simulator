@@ -226,13 +226,13 @@ Nahid (Villager) - Dead
  
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/werewolf-village.git
-cd werewolf-village
+git clone https://github.com/TajkirHossen-14/Werewolf_Village-Game_Simulator.git
+cd Werewolf_Village-Game_Simulator
  
 # 2. Make sure players.txt exists with at least 4 names
  
-# 3. Run the game
-python werewolf_game.py
+# 3. Open the notebook
+jupyter notebook Werewolf_Game.ipynb
 ```
  
 ### Use Your Own Player Names
