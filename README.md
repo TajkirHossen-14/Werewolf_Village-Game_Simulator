@@ -235,10 +235,11 @@ python werewolf_game.py
 Just edit `players.txt` before running — one name per line:
  
 ```
-YourName1
-YourName2
-YourName3
-YourName4
+Name1
+Name2
+Name3
+Name4
+...
 ```
  
 ---
@@ -261,8 +262,8 @@ YourName4
  
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)
  
-- **Language:** Python 3
-- **Libraries:** `random` (built-in only — no external dependencies)
+- **Language :** Python 3
+- **Libraries :** `random` (built-in only — no external dependencies)
 ---
  
 ## 📄 License
