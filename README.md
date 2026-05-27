@@ -1,0 +1,270 @@
+# 🐺 Werewolf Village — Game Simulator
+ 
+> *A peaceful village is hiding a dangerous secret...*
+ 
+A text-based simulation of the classic **Werewolf** party game, built in Python.  
+Two hidden werewolves lurk among the villagers. Every night they strike; every day the village votes.  
+The game ends when all werewolves are gone — or when the wolves outnumber the survivors.
+ 
+---
+ 
+## 📸 Sample Output
+ 
+```
+ ---- WEREWOLF GAME START ----
+ 
+[ Day :  1 ]
+ 
+< Night Phase >
+Shome was attacked.
+ 
+< Day Phase >
+Ronaldo was voted out.
+____________________
+ 
+[ Day :  2 ]
+ 
+< Night Phase >
+Custom Event : Dense fog covered the village.
+Werewolves got lost and attacked nobody.
+ 
+< Day Phase >
+Nahid was voted out.
+____________________
+ 
+Winner :  Villagers
+ 
+Result saved into result.txt
+```
+ 
+---
+ 
+## 📁 Project Structure
+ 
+```
+werewolf-village/
+│
+├── werewolf_game.py      # Main program — all code lives here
+├── players.txt           # Input  — one player name per line
+├── result.txt            # Output — game result (auto-generated after each run)
+└── README.md
+```
+ 
+---
+ 
+## 🎮 How the Game Works
+ 
+### Roles
+ 
+| Role | Count | Goal |
+|---|---|---|
+| 🧑 **Villager** | All except 2 | Find and vote out both werewolves |
+| 🐺 **Werewolf** | 2 | Outnumber or equal the remaining villagers |
+ 
+### Win Conditions
+ 
+- 🎉 **Villagers Win** — Both werewolves are eliminated
+- 🐺 **Werewolves Win** — Werewolves are equal to or outnumber remaining villagers
+### Game Flow
+ 
+```
+Game Start
+    │
+    ▼
+🌙 Night Phase
+    ├── Roll random event (1–10)
+    ├── If event = 1 → Dense Fog    (nobody is attacked)
+    ├── If event = 2 → Lucky Escape (target survives)
+    └── Otherwise   → Werewolves eliminate a random villager
+    │
+    ▼
+Check winner → if yes, END
+    │
+    ▼
+☀️ Day Phase
+    └── Village randomly votes out one alive player
+    │
+    ▼
+Check winner → if yes, END
+    │
+    └──── repeat ────┘
+```
+ 
+---
+ 
+## ✨ Features
+ 
+| Feature | Details |
+|---|---|
+| 🎭 **2 Classes** | `Player` and `Game` |
+| ⚙️ **10 Methods** | Across both classes (see breakdown below) |
+| 📂 **File Reading** | Player names read from `players.txt` |
+| 📝 **File Writing** | Game result saved to `result.txt` |
+| 🎲 **Random Module** | Role assignment, night attacks, day votes, event rolls |
+| 📋 **List of Objects** | `self.players` — a list of `Player` instances |
+| 🔁 **Loop Gameplay** | `while True` loop drives the full game |
+| 🌫️ **Custom Event 1** | **Dense Fog** — werewolves get lost, nobody is attacked |
+| 🍀 **Custom Event 2** | **Lucky Escape** — the chosen victim escapes the attack |
+ 
+---
+ 
+## 🏗️ Code Overview
+ 
+### `Player` Class
+ 
+Represents a single player in the game.
+ 
+```python
+class Player:
+    def __init__(self, name):
+        self.name  = name          # player's name
+        self.role  = "Villager"    # default role
+        self.alive = True          # alive status
+```
+ 
+| Method | Description |
+|---|---|
+| `make_werewolf()` | Changes the player's role to `"Werewolf"` |
+| `eliminate()` | Sets `alive = False` |
+| `__str__()` | Returns a formatted string like `Alex (Villager) - Alive` |
+ 
+---
+ 
+### `Game` Class
+ 
+Controls the full game — setup, phases, events, win check, and file I/O.
+ 
+```python
+class Game:
+    def __init__(self, filename):
+        self.players   = []     # list of Player objects
+        self.day_count = 1
+        self.load_players(filename)
+        self.assign_werewolves()
+```
+ 
+| Method | Description |
+|---|---|
+| `load_players(filename)` | Reads names from the text file and builds `Player` objects |
+| `assign_werewolves()` | Randomly selects 2 players and sets their role to Werewolf |
+| `alive_players()` | Returns a list of all players still alive |
+| `alive_werewolves()` | Returns alive players whose role is `"Werewolf"` |
+| `alive_villagers()` | Returns alive players whose role is `"Villager"` |
+| `night_phase()` | Rolls a random event; werewolves attack a random villager |
+| `day_phase()` | Village randomly votes out one alive player |
+| `check_winner()` | Returns `"Villagers"`, `"Werewolves"`, or `None` |
+| `save_result(winner)` | Writes the winner and all player statuses to `result.txt` |
+| `start_game()` | Main loop — runs Night → Day until a winner is found |
+ 
+---
+ 
+## 🎲 Custom Events
+ 
+Both events are triggered inside `night_phase()` using `random.randint(1, 10)`.
+ 
+### 🌫️ Event 1 — Dense Fog  *(1 in 10 chance)*
+> *"Dense fog covered the village. Werewolves got lost and attacked nobody."*
+ 
+- The werewolves attempt to move but get completely lost in the fog
+- No villager is eliminated that night
+- The day phase still follows normally
+### 🍀 Event 2 — Lucky Escape  *(1 in 10 chance)*
+> *"Lucky Escape! [name] escaped from the attack."*
+ 
+- A victim is randomly chosen as usual
+- At the last moment, they manage to escape
+- The player survives and the night ends with no elimination
+---
+ 
+## 💾 File Format
+ 
+### `players.txt` (input)
+One player name per line. Minimum 4 players recommended.
+ 
+```
+Akbar
+Hamza
+Tajkir
+Hamid
+Shome
+Messi
+Ronaldo
+Nahid
+```
+ 
+### `result.txt` (Output)
+Auto-generated at the end of every game run.
+ 
+```
+Werewolf Game Result
+--------------------
+Winner : Villagers
+ 
+Final Player Status :
+Akbar (Villager) - Dead
+Hamza (Werewolf) - Dead
+Tajkir (Villager) - Alive
+Hamid (Werewolf) - Dead
+Shome (Villager) - Dead
+Messi (Villager) - Alive
+Ronaldo (Villager) - Alive
+Nahid (Villager) - Dead
+```
+ 
+---
+ 
+## 🚀 Getting Started
+ 
+### Prerequisites
+- Python 3.x (no external libraries needed)
+### Run the Game
+ 
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/werewolf-village.git
+cd werewolf-village
+ 
+# 2. Make sure players.txt exists with at least 4 names
+ 
+# 3. Run the game
+python werewolf_game.py
+```
+ 
+### Use Your Own Player Names
+ 
+Just edit `players.txt` before running — one name per line:
+ 
+```
+YourName1
+YourName2
+YourName3
+YourName4
+```
+ 
+---
+ 
+## 📊 Requirements Coverage
+ 
+| Requirement | Status | Where in Code |
+|---|---|---|
+| At least 2 classes | ✅ | `Player`, `Game` |
+| At least 4 methods | ✅ | 10 methods total across both classes |
+| File reading | ✅ | `load_players()` reads `players.txt` |
+| File writing | ✅ | `save_result()` writes `result.txt` |
+| Random module | ✅ | `random.sample()`, `random.choice()`, `random.randint()` |
+| List of objects | ✅ | `self.players` — list of `Player` instances |
+| Loop-based gameplay | ✅ | `while True` loop in `start_game()` |
+ 
+---
+ 
+## 🛠️ Tech Stack
+ 
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)
+ 
+- **Language:** Python 3
+- **Libraries:** `random` (built-in only — no external dependencies)
+---
+ 
+## 📄 License
+ 
+This project is open source and available under the [MIT License](LICENSE).
