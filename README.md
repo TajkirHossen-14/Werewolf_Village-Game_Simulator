@@ -68,8 +68,8 @@ Werewolf Game Simulator/
  
 ### Win Conditions
  
-- 🎉 **Villagers Win** — Both werewolves are eliminated
-- 🐺 **Werewolves Win** — Werewolves are equal to or outnumber remaining villagers
+- 🎉 **Villagers Win** – Both werewolves are eliminated
+- 🐺 **Werewolves Win** – Werewolves are equal to or outnumber remaining villagers
 ### Game Flow
  
 ```
@@ -80,17 +80,17 @@ Game Start
     ├── Roll random event (1–10)
     ├── If event = 1 → Dense Fog    (nobody is attacked)
     ├── If event = 2 → Lucky Escape (target survives)
-    └── Otherwise   → Werewolves eliminate a random villager
+    └── Otherwise    → Werewolves eliminate a random villager
     │
     ▼
-Check winner → if yes, END
+Check winner → if Yes, END
     │
     ▼
 ☀️ Day Phase
     └── Village randomly votes out one alive player
     │
     ▼
-Check winner → if yes, END
+Check winner → if Yes, END
     │
     └──── repeat ────┘
 ```
