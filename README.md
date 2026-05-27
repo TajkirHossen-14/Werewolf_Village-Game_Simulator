@@ -47,11 +47,11 @@ Result saved into result.txt
 ## 📁 Project Structure
  
 ```
-werewolf-village/
+Werewolf Game Simulator/
 │
-├── werewolf_game.py      # Main program — all code lives here
-├── players.txt           # Input  — one player name per line
-├── result.txt            # Output — game result (auto-generated after each run)
+├── Werewolf_Game.ipynb      # Main program — All code lives here
+├── players.txt              # Input  — One player name per line
+├── result.txt               # Output — Game result (auto-generated after each run)
 └── README.md
 ```
  
