@@ -1,0 +1,13 @@
+Werewolf Game Result
+--------------------
+Winner : Villagers
+
+Final Player Status : 
+Akbar (Villager) - Alive
+Hamza (Villager) - Alive
+Tajkir (Villager) - Alive
+Hamid (Werewolf) - Dead
+Shome (Villager) - Dead
+Messi (Villager) - Alive
+Ronaldo (Werewolf) - Dead
+Nahid (Villager) - Dead
