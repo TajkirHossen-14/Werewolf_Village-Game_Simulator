@@ -1,4 +1,7 @@
-# 🐺 Werewolf Village — Game Simulator
+<div align="center">
+<p align="center">
+  <img src="Banner/WVGS Banner.png" alt="Werewolf Village – Game Simulator Banner" width="100%">
+</p>
  
 > *A peaceful village is hiding a dangerous secret...*
  
