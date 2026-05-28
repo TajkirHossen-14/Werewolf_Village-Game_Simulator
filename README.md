@@ -137,7 +137,7 @@ class Player:
  
 ### `Game` Class
  
-Controls the full game — setup, phases, events, win check, and file I/O.
+Controls the full game – setup, phases, events, win check, and file I/O.
  
 ```python
 class Game:
@@ -167,13 +167,13 @@ class Game:
  
 Both events are triggered inside `night_phase()` using `random.randint(1, 10)`.
  
-### 🌫️ Event 1 — Dense Fog  *(1 in 10 chance)*
+### 🌫️ Event 1 – Dense Fog  *(1 in 10 chance)*
 > *"Dense fog covered the village. Werewolves got lost and attacked nobody."*
  
 - The werewolves attempt to move but get completely lost in the fog
 - No villager is eliminated that night
 - The day phase still follows normally
-### 🍀 Event 2 — Lucky Escape  *(1 in 10 chance)*
+### 🍀 Event 2 – Lucky Escape  *(1 in 10 chance)*
 > *"Lucky Escape! [name] escaped from the attack."*
  
 - A victim is randomly chosen as usual
