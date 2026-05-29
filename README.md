@@ -55,7 +55,7 @@ Werewolf Game Simulator/
 │
 ├── Werewolf_Game.ipynb      # Main program — All code lives here
 ├── players.txt              # Input  — One player name per line
-├── result.txt               # Output — Game result (auto-generated after each run)
+├── result.txt               # Output — Game result (Auto-generated after each run)
 └── README.md
 ```
  
@@ -82,21 +82,21 @@ Game Start
     ▼
 🌙 Night Phase
     ├── Roll random event (1–10)
-    ├── If event = 1 → Dense Fog    (nobody is attacked)
-    ├── If event = 2 → Lucky Escape (target survives)
+    ├── If event = 1 → Dense Fog    (Nobody is attacked)
+    ├── If event = 2 → Lucky Escape (Target survives)
     └── Otherwise    → Werewolves eliminate a random villager
     │
     ▼
-Check winner → if Yes, END
+Check Winner → if Yes, END
     │
     ▼
 ☀️ Day Phase
     └── Village randomly votes out one alive player
     │
     ▼
-Check winner → if Yes, END
+Check Winner → if Yes, END
     │
-    └──── repeat ────┘
+    └──── Repeat ────┘
 ```
  
 ---
