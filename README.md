@@ -3,11 +3,15 @@
   <img src="Banner/WVGS Banner 2.png" alt="Werewolf Village – Game Simulator Banner" width="100%">
 </p>
  
-> *A peaceful village is hiding a dangerous secret...*
- 
-A text-based simulation of the classic **Werewolf** game, built in Python.  
-Two hidden werewolves lurk among the villagers. Every night they strike; every day the village votes.  
-The game ends when all werewolves are gone or when the wolves outnumber the survivors.
+*A peaceful village is hiding a dangerous secret...*
+
+Among the villagers, two players are secretly Werewolves. Every night, the Werewolves
+silently attack a villager. During the day, the villagers try to guess who the Werewolves
+are and vote to remove the suspect. The villagers know that danger exists — but they do
+not know who the Werewolves are. The game continues until both Werewolves are eliminated,
+or the Werewolves equal or outnumber the remaining Villagers.
+
+> A text-based **Werewolf** game simulation built in Python.
 
 </div>
 
