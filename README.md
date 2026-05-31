@@ -143,12 +143,12 @@ class Player:
  
 ### `Game` Class
  
-Controls the full game – setup, phases, events, win check, and file I/O.
+Controls the full game – Setup, phases, events, win check, and file I/O.
  
 ```python
 class Game:
     def __init__(self, filename):
-        self.players   = []     # list of Player objects
+        self.players   = []     # List of Player objects
         self.day_count = 1
         self.load_players(filename)
         self.assign_werewolves()
@@ -227,7 +227,7 @@ Nahid (Villager) - Dead
 ## 🚀 Getting Started
  
 ### Prerequisites
-- Python 3.x (no external libraries needed)
+- Python 3.x (No external libraries needed)
 ### Run the Game
  
 ```bash
