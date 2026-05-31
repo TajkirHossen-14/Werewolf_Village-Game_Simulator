@@ -114,8 +114,8 @@ Check Winner → if Yes, END
 | 🎲 **Random Module** | Role assignment, night attacks, day votes, event rolls |
 | 📋 **List of Objects** | `self.players` — a list of `Player` instances |
 | 🔁 **Loop Gameplay** | `while True` loop drives the full game |
-| 🌫️ **Custom Event 1** | **Dense Fog** — werewolves get lost, nobody is attacked |
-| 🍀 **Custom Event 2** | **Lucky Escape** — the chosen victim escapes the attack |
+| 🌫️ **Custom Event 1** | **Dense Fog** – Werewolves get lost, nobody is attacked |
+| 🍀 **Custom Event 2** | **Lucky Escape** – The chosen victim escapes the attack |
  
 ---
  
@@ -165,7 +165,7 @@ class Game:
 | `day_phase()` | Village randomly votes out one alive player |
 | `check_winner()` | Returns `"Villagers"`, `"Werewolves"`, or `None` |
 | `save_result(winner)` | Writes the winner and all player statuses to `result.txt` |
-| `start_game()` | Main loop — runs Night → Day until a winner is found |
+| `start_game()` | Main loop – runs Night → Day until a winner is found |
  
 ---
  
