@@ -243,7 +243,7 @@ jupyter notebook Werewolf_Game.ipynb
  
 ### Use Your Own Player Names
  
-Just edit `players.txt` before running – one name per line:
+Just edit `players.txt` before running – One name per line:
  
 ```
 Name1
@@ -274,5 +274,5 @@ Name4
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)
  
 - **Language :** Python 3
-- **Libraries :** `random` (built-in only – no external dependencies)
+- **Libraries :** `random` (Built-in only – no external dependencies)
 
