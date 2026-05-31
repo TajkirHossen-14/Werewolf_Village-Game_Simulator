@@ -7,7 +7,7 @@
 
 Among the villagers, two players are secretly Werewolves. Every night, the Werewolves
 silently attack a villager. During the day, the villagers try to guess who the Werewolves
-are and vote to remove the suspect. The villagers know that danger exists — but they do
+are and vote to remove the suspect. The villagers know that danger exists – but they do
 not know who the Werewolves are. The game continues until both Werewolves are eliminated,
 or the Werewolves equal or outnumber the remaining Villagers.
 
