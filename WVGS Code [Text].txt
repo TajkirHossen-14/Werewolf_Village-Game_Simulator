@@ -1,0 +1,195 @@
+# ------------------------------------------------
+# Werewolf Game Simulator
+# ------------------------------------------------
+
+
+import random
+
+
+class Player:                                 # Player Class
+
+    def __init__(self, name): 
+
+        self.name = name
+        self.role = "Villager"
+        self.alive = True
+
+    def make_werewolf(self): 
+        self.role = "Werewolf"
+
+    def eliminate(self):
+        self.alive = False
+
+    def __str__(self):
+        return f"{self.name} ({self.role}) - {'Alive' if self.alive else 'Dead'}"
+    
+
+class Game:                                    # Game Class
+
+    def __init__(self, filename):
+
+        self.players = []
+        self.day_count = 1
+        self.load_players(filename)
+        self.assign_werewolves()
+
+    
+    def load_players(self, filename):                 # Method 1
+
+        file = open(filename, "r")
+
+        for line in file:
+            name = line.strip()
+            
+            if name:
+                player = Player(name)
+                self.players.append(player)
+
+        file.close()
+
+
+    def assign_werewolves(self):                       # Method 2
+
+        selected = random.sample(self.players, 2)
+
+        for player in selected:
+
+            player.make_werewolf()            
+
+
+    def alive_players(self):                            # Method 3
+
+        return [p for p in self.players if p.alive]     
+
+
+    def alive_werewolves(self):                         # Method 4
+
+        return [p for p in self.alive_players()
+                if p.role == "Werewolf"]                
+    
+
+    def alive_villagers(self):                          # Method 5
+
+        return [p for p in self.alive_players()
+                if p.role == "Villager"]
+
+
+
+    def night_phase(self):                              # Night Phase
+
+        print("\n< Night Phase >")
+
+        villagers = self.alive_villagers()
+
+        if len(villagers) == 0:
+            return
+
+
+        event = random.randint(1, 10)                   # Event 1
+
+        if event == 1:
+
+            print("Custom Event : Dense Fog Covered the Village.")
+            print("Werewolves got lost and attacked nobody.")
+            return
+
+        victim = random.choice(villagers)               # Event 2
+        
+        if event == 2:
+
+            print("Custom Event : Lucky Escape!")
+            print(victim.name,"escaped from the attack.")
+            return 
+        
+        victim.eliminate()
+
+        print(victim.name,"was attacked.")
+
+
+
+    def day_phase(self):                             # Day Phase
+
+        print("\n< Day Phase >")
+
+        alive = self.alive_players()
+
+        if len(alive) <= 1:
+            return
+
+        suspect = random.choice(alive)
+
+        suspect.eliminate()
+
+        print(suspect.name,"was voted out.")
+        print("____________________")
+
+
+
+    def check_winner(self):                          # Check Winner
+
+        wolves = len(self.alive_werewolves())
+        villagers = len(self.alive_villagers())
+
+        if wolves == 0:
+            return "Villagers"
+
+        if wolves >= villagers:
+            return "Werewolves"
+                
+        return None
+        
+
+        
+    def save_result(self,winner):                     # Save Result
+
+        file = open("result.txt","w")
+
+        file.write("Werewolf Game Result\n")
+        file.write("--------------------\n")
+
+        file.write("Winner : " +winner+"\n\n")
+
+        file.write("Final Player Status : \n")
+
+        for p in self.players:
+            file.write(str(p)+"\n")
+
+        file.close()    
+
+
+
+    def start_game(self):                             # Game Start
+
+        print(" ---- WEREWOLF GAME START ----")
+
+        while True:
+
+            print("\n[ Day : ", self.day_count, "]")
+
+            self.night_phase()
+
+            winner = self.check_winner()
+
+            if winner:
+                break
+
+            self.day_phase()
+
+            winner = self.check_winner()   
+
+            if winner:
+                break
+
+            self.day_count += 1
+
+        print("\nWinner : ", winner)
+
+        self.save_result(winner)
+
+        print("\nResult saved into result.txt")         
+
+
+
+game = Game("players.txt")                          # Main Program
+
+game.start_game()
