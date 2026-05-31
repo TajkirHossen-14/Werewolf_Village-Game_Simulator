@@ -52,11 +52,13 @@ Result saved into result.txt
  
 ```
 Werewolf Game Simulator/
-│
+│ 
 ├── Werewolf_Game.ipynb      # Main program — All code lives here
 ├── players.txt              # Input  — One player name per line
 ├── result.txt               # Output — Game result (Auto-generated after each run)
+├── WVGS Code [Text].txt
 └── README.md
+└── Banner
 ```
  
 ---
