@@ -112,7 +112,7 @@ Check Winner → if Yes, END
 | 📂 **File Reading** | Player names read from `players.txt` |
 | 📝 **File Writing** | Game result saved to `result.txt` |
 | 🎲 **Random Module** | Role assignment, night attacks, day votes, event rolls |
-| 📋 **List of Objects** | `self.players` — a list of `Player` instances |
+| 📋 **List of Objects** | `self.players` – A list of `Player` instances |
 | 🔁 **Loop Gameplay** | `while True` loop drives the full game |
 | 🌫️ **Custom Event 1** | **Dense Fog** – Werewolves get lost, nobody is attacked |
 | 🍀 **Custom Event 2** | **Lucky Escape** – The chosen victim escapes the attack |
@@ -128,9 +128,9 @@ Represents a single player in the game.
 ```python
 class Player:
     def __init__(self, name):
-        self.name  = name          # player's name
-        self.role  = "Villager"    # default role
-        self.alive = True          # alive status
+        self.name  = name          # Player's name
+        self.role  = "Villager"    # Default role
+        self.alive = True          # Alive status
 ```
  
 | Method | Description |
