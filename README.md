@@ -51,15 +51,16 @@ Result saved into result.txt
 ## 📁 Project Structure
  
 ```
-Werewolf Game Simulator/
-│____
-│    ├── Werewolf_Game.ipynb      # Main program — All code lives here
-│    ├── players.txt              # Input  — One player name per line
-│    ├── result.txt               # Output — Game result (Auto-generated after each run)
+Werewolf_Village-Game_Simulator/
+│
+├── Werewolf Game Simulator/
+│    ├── Werewolf_Game.ipynb         # Main notebook — All code lives here
+│    ├── players.txt                 # Input  — One player name per line
+│    ├── result.txt                  # Output — Game result (Auto-generated after each run)
 │    └── WVGS Code [Text].txt
 │
+├── Assets/
 └── README.md
-└── Assets
 ```
  
 ---
