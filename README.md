@@ -1,6 +1,6 @@
 <div align="center">
 <p align="center">
-  <img src="Banner/WVGS Banner 2.png" alt="Werewolf Village – Game Simulator Banner" width="100%">
+  <img src="Assets/Banner/WVGS Banner 2.png" alt="Werewolf Village – Game Simulator Banner" width="100%">
 </p>
  
 *A peaceful village is hiding a dangerous secret...*
