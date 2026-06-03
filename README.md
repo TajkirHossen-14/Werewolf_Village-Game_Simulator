@@ -102,7 +102,7 @@ Check Winner → if Yes, END
     └──── Repeat ────┘
 -->
 
-<img src="Assets/Game Flow/WVGS - Game Flow.png" alt="Game Flow" width="70%">
+<img src="Assets/Game Flow/WVGS - Game Flow.png" alt="Game Flow" width="75%">
  
 ---
  
