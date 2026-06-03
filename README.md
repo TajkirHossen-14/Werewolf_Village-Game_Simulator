@@ -76,9 +76,10 @@ Werewolf Game Simulator/
  
 - 🎉 **Villagers Win** – Both werewolves are eliminated
 - 🐺 **Werewolves Win** – Werewolves are equal to or outnumber remaining villagers
+
 ### Game Flow
- 
-```
+
+<!--
 Game Start
     │
     ▼
@@ -99,7 +100,9 @@ Check Winner → if Yes, END
 Check Winner → if Yes, END
     │
     └──── Repeat ────┘
-```
+-->
+
+<img src="Assets/Game Flow/WVGS - Game Flow.png" alt="Game Flow" width="100%">
  
 ---
  
