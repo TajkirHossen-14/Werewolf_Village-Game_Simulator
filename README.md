@@ -46,7 +46,7 @@ Winner :  Villagers
 Result saved into result.txt
 ```
  
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="100%"/>
  
 ## 📁 Project Structure
  
@@ -63,7 +63,7 @@ Werewolf_Village-Game_Simulator/
 └── README.md
 ```
  
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="100%"/>
  
 ## 🎮 How the Game Works
  
@@ -106,7 +106,7 @@ Check Winner → if Yes, END
 
 <img src="Assets/Game Flow/WVGS - Game Flow.png" alt="Game Flow" width="85%">
  
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="100%"/>
  
 ## ✨ Features
  
@@ -122,7 +122,7 @@ Check Winner → if Yes, END
 | 🌫️ **Custom Event 1** | **Dense Fog** – Werewolves get lost, nobody is attacked |
 | 🍀 **Custom Event 2** | **Lucky Escape** – The chosen victim escapes the attack |
  
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="100%"/>
  
 ## 🏗️ Code Overview
  
@@ -144,7 +144,7 @@ class Player:
 | `eliminate()` | Sets `alive = False` |
 | `__str__()` | Returns a formatted string like `Alex (Villager) - Alive` |
  
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="100%"/>
  
 ### `Game` Class
  
@@ -172,7 +172,7 @@ class Game:
 | `save_result(winner)` | Writes the winner and all player statuses to `result.txt` |
 | `start_game()` | Main loop – runs Night → Day until a winner is found |
  
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="100%"/>
  
 ## 🎲 Custom Events
  
@@ -190,7 +190,8 @@ Both events are triggered inside `night_phase()` using `random.randint(1, 10)`.
 - A victim is randomly chosen as usual
 - At the last moment, they manage to escape
 - The player survives and the night ends with no elimination
----
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="100%"/>
  
 ## 💾 File Format
  
@@ -227,7 +228,7 @@ Ronaldo (Villager) - Alive
 Nahid (Villager) - Dead
 ```
  
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="100%"/>
  
 ## 🚀 Getting Started
  
@@ -258,7 +259,7 @@ Name4
 ...
 ```
  
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="100%"/>
  
 ## 📊 Requirements Coverage
  
@@ -272,7 +273,7 @@ Name4
 | List of objects | ✅ | `self.players` – list of `Player` instances |
 | Loop-based gameplay | ✅ | `while True` loop in `start_game()` |
  
----
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="100%"/>
  
 ## 🛠️ Tech Stack
  
