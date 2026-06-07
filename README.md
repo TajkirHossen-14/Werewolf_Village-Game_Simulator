@@ -15,7 +15,7 @@ or the Werewolves equal or outnumber the remaining Villagers.
 
 </div>
 
----
+<img src="./Assets/line.svg" width="100%"/>
  
 ## 📸 Sample Output
  
