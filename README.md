@@ -15,7 +15,7 @@ or the Werewolves equal or outnumber the remaining Villagers.
 
 </div>
 
-<img src="./Assets/line.svg" width="100%"/>
+![Divider](https://img.shields.io/badge/─────────────────────────────────────────────────────────────────────────-254761?style=flat)
  
 ## 📸 Sample Output
  
